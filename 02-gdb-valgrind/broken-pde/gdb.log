@@ -1,0 +1,629 @@
+Script started on Sa 29 Okt 2016 18:13:12 CEST
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde]1;..nd/broken-pde]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/broken%2Dpde[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[126C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 456 [39m[37m[39m[47m[30m 18:13:12 [39m[00m[49m[147D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[126C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 456 [39m[37m[39m[47m[30m 18:13:12 [39m[00m[49m[147D[?2004hmmemcheck partdiff-seq.                    m  mmake[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m make[K[122C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 456 [39m[37m[39m[47m[30m 18:13:49 [39m[00m[49m[143D
+]2;make]1;makegcc -c -ggdb -Wall partdiff-seq.c
+gcc -c -ggdb -Wall askparams.c
+gcc -c -ggdb -Wall displaymatrix.c
+gcc  -o partdiff-seq partdiff-seq.o askparams.o displaymatrix.o -lm
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde]1;..nd/broken-pde]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/broken%2Dpde[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[126C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[147D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[126C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[147D[?2004hg ggdb g  vvalgrin d --tool[1m=[0m[0m=memcheck 
+zsh: do you wish to see all 5422 possibilities (1356 lines)? n[J[A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck[K[102C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[122Dpar
+[J[J[0mparec            [Jparecord         [Jparsechangelog   [Jparse_git_dirty  [Jparted           [Jpartprobe        [Jpartx          [J[A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck par[K[98C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[119Dt
+[J[J[0mparted     [Jpartprobe  [Jpartx    [J[A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck part[K[97C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[118D    ./
+[J[J[0maskparams.c      [Jaskparams.o      [Jdisplaymatrix.c  [Jdisplaymatrix.o  [Jgdb.log          [JMakefile         [J[01;32mpartdiff-seq[0m*    [Jpartdiff-seq.c   [Jpartdiff-seq.h   [Jpartdiff-seq.o [J[A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck ./[K[99C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[120Dp
+[J[A[118Cartdiff-seq
+[J[J[01;32mpartdiff-seq[0m*   [Jpartdiff-seq.c  [Jpartdiff-seq.h  [Jpartdiff-seq.o[J[A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck ./partdiff-seq[K[87C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[108D
+[J[7mpartdiff-seq* [0m  [Jpartdiff-seq.c  [Jpartdiff-seq.h  [Jpartdiff-seq.o[J[A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck ./partdiff-seq[K[87C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[108D
+[7mpartdiff-seq* [0m  [7mpartdiff-seq* [0m  [A[0m[27m[24m[0m[27m[24m[39m[49m[90Cvalgrind --tool=memcheck ./partdiff-seq[K[87C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:13:50 [39m[00m[49m[0m[27m[24m[39m[49m[108D
+[J[A[129C[1m [0m[0m 1 1 100 1 2 5[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m valgrind --tool=memcheck ./partdiff-seq 1 1 100 1 2 5[K[73C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 457 [39m[37m[39m[47m[30m 18:14:35 [39m[00m[49m[94D
+]2;valgrind --tool=memcheck ./partdiff-seq 1 1 100 1 2 5]1;valgrind==19175== Memcheck, a memory error detector
+==19175== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==19175== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==19175== Command: ./partdiff-seq 1 1 100 1 2 5
+==19175== 
+
+============================================================
+Program for calculation of partial differential equations.  
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+==19175== Invalid read of size 1
+==19175==    at 0x51D9210: rawmemchr (rawmemchr.S:25)
+==19175==    by 0x51C1701: _IO_str_init_static_internal (strops.c:41)
+==19175==    by 0x51AEB96: __isoc99_vsscanf (isoc99_vsscanf.c:41)
+==19175==    by 0x51AEB36: __isoc99_sscanf (isoc99_sscanf.c:31)
+==19175==    by 0x109D6E: AskParams (askparams.c:197)
+==19175==    by 0x109742: main (partdiff-seq.c:304)
+==19175==  Address 0x69726f6874756158 is not stack'd, malloc'd or (recently) free'd
+==19175== 
+==19175== 
+==19175== Process terminating with default action of signal 11 (SIGSEGV)
+==19175==  General Protection Fault
+==19175==    at 0x51D9210: rawmemchr (rawmemchr.S:25)
+==19175==    by 0x51C1701: _IO_str_init_static_internal (strops.c:41)
+==19175==    by 0x51AEB96: __isoc99_vsscanf (isoc99_vsscanf.c:41)
+==19175==    by 0x51AEB36: __isoc99_sscanf (isoc99_sscanf.c:31)
+==19175==    by 0x109D6E: AskParams (askparams.c:197)
+==19175==    by 0x109742: main (partdiff-seq.c:304)
+==19175== 
+==19175== HEAP SUMMARY:
+==19175==     in use at exit: 0 bytes in 0 blocks
+==19175==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==19175== 
+==19175== All heap blocks were freed -- no leaks are possible
+==19175== 
+==19175== For counts of detected and suppressed errors, rerun with: -v
+==19175== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[1]    19175 segmentation fault (core dumped)  valgrind --tool=memcheck ./partdiff-seq 1 1 100 1 2 5
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde]1;..nd/broken-pde]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/broken%2Dpde[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[122C[39m[0m[49m[31m[39m[41m[38;5;226m 139 [38;5;226m↵[39m [39m[38;5;244m[39m[48;5;244m[30m 458 [39m[37m[39m[47m[30m 18:14:40 [39m[00m[49m[147D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[122C[39m[0m[49m[31m[39m[41m[38;5;226m 139 [38;5;226m↵[39m [39m[38;5;244m[39m[48;5;244m[30m 458 [39m[37m[39m[47m[30m 18:14:40 [39m[00m[49m[147D[?2004hvalgrind --tool=memcheck ./partdiff-seq 1 1 100 1 2 5./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29Dv./partdiff-seq 1 1 100 1 2 5 [29D./partdiff-seq 1 1 100 1 2 5 [29D[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m ./partdiff-seq 1 1 100 1 2 5[K[94C[39m[0m[49m[31m[39m[41m[38;5;226m 139 [38;5;226m↵[39m [39m[38;5;244m[39m[48;5;244m[30m 458 [39m[37m[39m[47m[30m 18:15:01 [39m[00m[49m[147D
+]2;./partdiff-seq 1 1 100 1 2 5]1;./partdiff-seq
+============================================================
+Program for calculation of partial differential equations.  
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+[1]    19302 segmentation fault (core dumped)  ./partdiff-seq 1 1 100 1 2 5
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde]1;..nd/broken-pde]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/broken%2Dpde[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[122C[39m[0m[49m[31m[39m[41m[38;5;226m 139 [38;5;226m↵[39m [39m[38;5;244m[39m[48;5;244m[30m 459 [39m[37m[39m[47m[30m 18:15:01 [39m[00m[49m[147D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m [K[122C[39m[0m[49m[31m[39m[41m[38;5;226m 139 [38;5;226m↵[39m [39m[38;5;244m[39m[48;5;244m[30m 459 [39m[37m[39m[47m[30m 18:15:01 [39m[00m[49m[147D[?2004hggdb  g  ./partdiff-seq 1 1 100 1 2 5g./partdiff-seq 1 1 100 1 2 5[28Dgd./partdiff-seq 1 1 100 1 2 5[28Db./partdiff-seq 1 1 100 1 2 5[28D ./partdiff-seq 1 1 100 1 2 5[28D[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde [49m[34m[39m gdb ./partdiff-seq 1 1 100 1 2 5[K[90C[39m[0m[49m[31m[39m[41m[38;5;226m 139 [38;5;226m↵[39m [39m[38;5;244m[39m[48;5;244m[30m 459 [39m[37m[39m[47m[30m 18:15:28 [39m[00m[49m[143D
+]2;gdb ./partdiff-seq 1 1 100 1 2 5]1;gdbExcess command line arguments ignored. (1 ...)
+GNU gdb (Ubuntu 7.11.90.20161005-0ubuntu1) 7.11.90.20161005-git
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./partdiff-seq...done.
+Attaching to program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde/partdiff-seq, process 1
+Could not attach to process.  If your uid matches the uid of the target
+process, check the setting of /proc/sys/kernel/yama/ptrace_scope, or try
+again as the root user.  For more details, see /etc/sysctl.d/10-ptrace.conf
+ptrace: Operation not permitted.
+/home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde/1: No such file or directory.
+(gdb) list
+290	{
+291	  freeMatrices ();
+292	  printf ("\n\nSpeicherprobleme !\n");
+293	  exit (1);			/* exit program */
+294	}
+295	
+296	
+297	
+298	/* ************************************************************************ */
+299	/*  main                                                                    */
+(gdb) list main
+298	/* ************************************************************************ */
+299	/*  main                                                                    */
+300	/* ************************************************************************ */
+301	int
+302	main (int argC, char **argV)
+303	{
+304	  AskParams (&method, &interlines, &inf_func,	/* ************************* */
+305		     &termination, &term_precision,	/*  get parameters           */
+306		     &term_iteration, argC, argV);	/* ************************* */
+307	
+(gdb) info function
+All defined functions:
+
+File askparams.c:
+void AskParams(int *, int *, int *, int *, double *, int *, int, char **);
+
+File displaymatrix.c:
+void DisplayMatrix(char *, double *, int);
+void DisplayMatrixAddr(char *, double ***, int, int);
+
+File partdiff-seq.c:
+void allocateMatrices(void);
+void calculate(void);
+void checkQuit(void);
+void displayStatistics(void);
+int errorQuit(void);
+void freeMatrices(void);
+double getResiduum(int, int);
+void initMatrices(void);
+void initVariables(void);
+int main(int, char **);
+
+Non-debugging symbols:
+0x0000000000000948  _init
+0x0000000000000a00  _start
+0x0000000000000a30  deregister_tm_clones
+0x0000000000000a70  register_tm_clones
+0x0000000000000ac0  __do_global_dtors_aux
+0x0000000000000b00  frame_dummy
+0x0000000000002180  __libc_csu_init
+0x00000000000021f0  __libc_csu_fini
+0x00000000000021f4  _fini
+(gdb) r
+Starting program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde/partdiff-seq 
+
+============================================================
+Program for calculation of partial differential equations.  
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+
+Select calculation method:
+  1: Gauss-Seidel.
+  2: Jacobi.
+method> 1
+
+Matrixsize = Interlines*8+9
+Interlines> 1
+
+Select interference function:
+ 1: f(x,y)=0.
+ 2: f(x,y)=2pi^2*sin(pi*x)sin(pi*y).
+interference function> 100
+
+Select interference function:
+ 1: f(x,y)=0.
+ 2: f(x,y)=2pi^2*sin(pi*x)sin(pi*y).
+interference function> 1
+
+Select termination:
+ 1: sufficient precision.
+ 2: number of iterations.
+termination> 2
+
+Select number of iterations:
+  Range: 1 .. 200000.
+Iterations> 5
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00005555555552e7 in calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) l
+225	      for (j = 1; j < N; j++)	/* over all columns     */
+226		{			/*                   */
+227		  for (i = 1; i < N; i++)	/* over all rows  */
+228		    {
+229		      star = -Matrix[m2][i - 1][j]
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+232	
+233		      residuum = getResiduum (i, j);
+234		      korrektur = residuum;
+(gdb) b 230
+Breakpoint 1 at 0x5555555552bc: file partdiff-seq.c, line 230.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde/partdiff-seq 
+
+============================================================
+Program for calculation of partial differential equations.  
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+
+Select calculation method:
+  1: Gauss-Seidel.
+  2: Jacobi.
+method> 1
+
+Matrixsize = Interlines*8+9
+Interlines> 1
+
+Select interference function:
+ 1: f(x,y)=0.
+ 2: f(x,y)=2pi^2*sin(pi*x)sin(pi*y).
+interference function> 100
+
+Select interference function:
+ 1: f(x,y)=0.
+ 2: f(x,y)=2pi^2*sin(pi*x)sin(pi*y).
+interference function> 1
+
+Select termination:
+ 1: sufficient precision.
+ 2: number of iterations.
+termination> 2
+
+Select number of iterations:
+  Range: 1 .. 200000.
+Iterations> 5
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) list
+225	      for (j = 1; j < N; j++)	/* over all columns     */
+226		{			/*                   */
+227		  for (i = 1; i < N; i++)	/* over all rows  */
+228		    {
+229		      star = -Matrix[m2][i - 1][j]
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+232	
+233		      residuum = getResiduum (i, j);
+234		      korrektur = residuum;
+(gdb) list size
+Function "size" not defined.
+(gdb) list-size
+Undefined command: "list-size".  Try "help".
+(gdb) help
+List of classes of commands:
+
+aliases -- Aliases of other commands
+breakpoints -- Making program stop at certain points
+data -- Examining data
+files -- Specifying and examining files
+internals -- Maintenance commands
+obscure -- Obscure features
+running -- Running the program
+stack -- Examining the stack
+status -- Status inquiries
+support -- Support facilities
+tracepoints -- Tracing of program execution without stopping the program
+user-defined -- User-defined commands
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) print Matrix
+$1 = (double ***) 0x555555758830
+(gdb) print Matrix[]1][C[]1][C[]1]
+$2 = 0
+(gdb) print Matrix[1][1][1][C[C[1P][1][1]m][1][1]2][1][1][C[C[C[1P][1]i][1]+][1]1][1][C[C[C[1P][C[C[C[1P][][1P][][C[Cj]
+$3 = 0
+(gdb) print Matrix[m2][i][j][1P][i][j][1P][i][j]j][i][j]-][i][j]1][i][j][C[C[C[1P][j]m][j]2][j][C[C[C[1P]i]
+$4 = 0.9375
+(gdb) print Matrix[j-1][m2][i][1P][m2][i][1P][m2][i][1P][m2][i]m][m2][i]2][m2][i][C[C[C[C[C[1P][i][1P][i]i][i]-][i]1][i][C[C[C[1P]j]
+$5 = 0.9375
+(gdb) print Matrix[m2][i-1][j][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CA[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kn
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) n
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) n
+229		      star = -Matrix[m2][i - 1][j]
+(gdb) n
+233		      residuum = getResiduum (i, j);
+(gdb) 
+234		      korrektur = residuum;
+(gdb) 
+235		      if (residuum < 0)
+(gdb) 
+237		      if (residuum >= maxresiduum)
+(gdb) 
+238			maxresiduum = residuum;
+(gdb) 
+239		      Matrix[m1][i][j] = Matrix[m2][i][j] + korrektur;
+(gdb) 
+227		  for (i = 1; i < N; i++)	/* over all rows  */
+(gdb) 
+229		      star = -Matrix[m2][i - 1][j]
+(gdb) 
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) i j[K[K[Kprint i
+$6 = 2
+(gdb) print j
+$7 = 1
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) p i
+$8 = 3
+(gdb) p j
+$9 = 1
+(gdb) c[Kn
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) c[Kn
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) n
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) c
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Breakpoint 1, calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00005555555552e7 in calculate () at partdiff-seq.c:230
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+(gdb) 
+Continuing.
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+(gdb) i
+"info" must be followed by the name of an info command.
+List of info subcommands:
+
+info address -- Describe where symbol SYM is stored
+info all-registers -- List of all registers and their contents
+info args -- Argument variables of current stack frame
+info auto-load -- Print current status of auto-loaded files
+info auxv -- Display the inferior's auxiliary vector
+info bookmarks -- Status of user-settable bookmarks
+info breakpoints -- Status of specified breakpoints (all user-settable breakpoints if no argument)
+info checkpoints -- IDs of currently known checkpoints
+info classes -- All Objective-C classes
+info common -- Print out the values contained in a Fortran COMMON block
+info copying -- Conditions for redistributing copies of GDB
+info dcache -- Print information on the dcache performance
+info display -- Expressions to display when program stops
+info exceptions -- List all Ada exception names
+info extensions -- All filename extensions associated with a source language
+info files -- Names of targets and files being debugged
+info float -- Print the status of the floating point unit
+info frame -- All about selected stack frame
+info frame-filter -- List all registered Python frame-filters
+info functions -- All function names
+info guile -- Prefix command for Guile info displays
+info handle -- What debugger does when program gets various signals
+info inferiors -- IDs of specified inferiors (all inferiors if no argument)
+info line -- Core addresses of the code for a source line
+info locals -- Local variables of current stack frame
+info macro -- Show the definition of MACRO
+info macros -- Show the definitions of all macros at LINESPEC
+info mem -- Memory region attributes
+info os -- Show OS data ARG
+info pretty-printer -- GDB command to list all registered pretty-printers
+info probes -- Show available static probes
+info proc -- Show /proc process information about any running process
+info program -- Execution status of the program
+info record -- Info record options
+info registers -- List of integer registers and their contents
+info scope -- List the variables local to a scope
+info selectors -- All Objective-C selectors
+info set -- Show all GDB settings
+info sharedlibrary -- Status of loaded shared object libraries
+info signals -- What debugger does when program gets various signals
+info skip -- Display the status of skips
+info source -- Information about the current source file
+info sources -- Source files in the program
+info stack -- Backtrace of the stack
+info static-tracepoint-markers -- List target static tracepoints markers
+info symbol -- Describe what symbol is at location ADDR
+info target -- Names of targets and files being debugged
+info tasks -- Provide information about all known Ada tasks
+info terminal -- Print inferior's saved terminal status
+info threads -- Display currently known threads
+info tracepoints -- Status of specified tracepoints (all tracepoints if no argument)
+info tvariables -- Status of trace state variables and their values
+info type-printers -- GDB command to list all registered type-printers
+info types -- All type names
+info unwinder -- GDB command to list unwinders
+info variables -- All global and static variable names
+info vector -- Print the status of the vector unit
+info vtbl -- Show the virtual function table for a C++ object
+info warranty -- Various kinds of warranty you do not have
+info watchpoints -- Status of specified watchpoints (all watchpoints if no argument)
+info win -- List of all displayed windows
+info xmethod -- GDB command to list registered xmethod matchers
+
+Type "help info" followed by info subcommand name for full documentation.
+Type "apropos word" to search for commands related to "word".
+---Type <return> to continue, or q <return> to quit---i[Kq
+Quit
+(gdb) p i
+No symbol "i" in current context.
+(gdb) p i[2Picncncncncncncncncncip i[K[K(gdb) [K(gdb) [K(gdb) [K(gdb) list 230
+225	      for (j = 1; j < N; j++)	/* over all columns     */
+226		{			/*                   */
+227		  for (i = 1; i < N; i++)	/* over all rows  */
+228		    {
+229		      star = -Matrix[m2][i - 1][j]
+230			- Matrix[j - 1][m2][i] + 4 * Matrix[m2][i][j] -
+231			Matrix[m2][i][j + 1] - Matrix[m2][i + 1][j];
+232	
+233		      residuum = getResiduum (i, j);
+234		      korrektur = residuum;
+(gdb) list 230[C[C[C[C[C[C[Kr
+Starting program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/broken-pde/partdiff-seq 
+
+============================================================
+Program for calculation of partial differential equations.  
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+
+Select calculation method:
+  1: Gauss-Seidel.
+  2: Jacobi.
+method> 1
+
+Matrixsize = Interlines*8+9
+Interlines> 1
+
+Select interference function:
+ 1: f(x,y)=0.
+ 2: f(x,y)=2pi^2*sin(pi*x)sin(pi*y).
+interference function> 100
+
+Select interference function:
+ 1: f(x,y)=0.
+ 2: f(x,y)=2pi^2*sin(pi*x)sin(pi*y).
+interference function> 1
+
+Select termination:
+ 1: 
