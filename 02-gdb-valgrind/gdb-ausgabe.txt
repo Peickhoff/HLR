@@ -1,0 +1,216 @@
+]2;gdb simple]1;gdbGNU gdb (Ubuntu 7.11.90.20161005-0ubuntu1) 7.11.90.20161005-git
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from simple...done.
+
+(gdb) list 0
+1	/*
+2	** simple error demonstration to demonstrate power of valgrind
+3	** Julian M. Kunkel - 17.04.2008
+4	*/
+5
+6	#include <stdio.h>
+7	#include <stdlib.h>
+8
+9	int *
+10	mistake1 ()
+(gdb) info function
+All defined functions:
+
+File simple.c:
+int main(void);
+int *mistake1();
+int *mistake2();
+int *mistake3();
+int *mistake4();
+
+Non-debugging symbols:
+0x0000000000000600  _init
+0x0000000000000660  _start
+0x0000000000000690  deregister_tm_clones
+0x00000000000006d0  register_tm_clones
+0x0000000000000720  __do_global_dtors_aux
+0x0000000000000760  frame_dummy
+0x0000000000000960  __libc_csu_init
+0x00000000000009d0  __libc_csu_fini
+0x00000000000009d4  _fini
+(gdb) list main
+39	  return buf;
+40	}
+41
+42	int
+43	main (void)
+44	{
+45	  /* Modifizieren Sie die folgende Zeile nicht */
+46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
+47
+48	  printf ("1 %d\n", *p[0]);
+(gdb) list mistake1
+6	#include <stdio.h>
+7	#include <stdlib.h>
+8
+9	int *
+10	mistake1 ()
+11	{
+12	  int buf[] = { 1, 1, 2, 3, 4, 5 };
+13	  return buf;
+14	}
+15
+(gdb) list mistake2
+13	  return buf;
+14	}
+15
+16	int *
+17	mistake2 ()
+18	{
+19	  int *buf = malloc (sizeof (char) * 4);
+20	  buf[2] = 2;
+21	  return buf;
+22	}
+(gdb) list mistake3
+21	  return buf;
+22	}
+23
+24	int *
+25	mistake3 ()
+26	{
+27	  int mistake2_ = 0;
+28	  int *buf = (int *) &mistake2;
+29	  buf[0] = 3;
+30	  return buf;
+(gdb)list mistake
+6	#include <stdio.h>
+7	#include <stdlib.h>
+8
+9	int *
+10	mistake1 ()
+11	{
+12	  int buf[] = { 1, 1, 2, 3, 4, 5 };
+13	  return buf;
+14	}
+15
+
+--------Breakpoint bei mistake1----------------------------------
+
+(gdb) b mistake1
+Breakpoint 1 at 0x798: file simple.c, line 11.
+Starting program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple/simple
+(gdb) run
+
+Breakpoint 1, mistake1 () at simple.c:11
+11	{
+
+--------Inhalt von buf,buf[2]------------------------------------
+
+(gdb) print buf
+$1 = {194, 0, -9313, 32767, -9314, 32767}
+(gdb) buf [K[]2]
+Undefined command: "buf".  Try "help".
+(gdb) buf[2]pbuf[2]rbuf[2]ibuf[2]nbuf[2]tbuf[2] buf[2]
+$2 = -9313
+(gdb) n
+12	  int buf[] = { 1, 1, 2, 3, 4, 5 };
+(gdb) print buf
+$3 = {194, 0, -9313, 32767, -9314, 32767}
+(gdb) print buf[2]
+$4 = -9313
+(gdb) n
+13	  return buf;
+(gdb) print buf
+$5 = {1, 1, 2, 3, 4, 5}
+(gdb) print buf[2]
+$6 = 2
+
+--------Typ von buf----------------------------------------------
+
+(gdb) ptype buf
+type = int [6]
+
+--------Breakpoint bei mistake2----------------------------------
+(gdb) b mistake2
+Breakpoint 2 at 0x5555555547f4: file simple.c, line 19.
+(gdb) c
+Continuing.
+
+Breakpoint 2, mistake2 () at simple.c:19
+19	  int *buf = malloc (sizeof (char) * 4);
+(
+
+--------Typ von buf----------------------------------------------
+gdb) ptype buf
+type = int *
+(gdb) c
+Continuing.
+
+--------Fehlerausgabe--------------------------------------------
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000555555554830 in mistake3 () at simple.c:29
+29	  buf[0] = 3;
+(gdb) list 29
+24	int *
+25	mistake3 ()
+26	{
+27	  int mistake2_ = 0;
+28	  int *buf = (int *) &mistake2;
+29	  buf[0] = 3;
+30	  return buf;
+31	}
+32
+33	int *
+
+-----Betrachten der Stackframes----------------------------------
+
+(gdb) frame 1
+#1  0x00005555555548b7 in main () at simple.c:46
+46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
+(gdb) x/10x $sp
+0x7fffffffdb90:	0x00000004	0x00000000	0x55756014	0x00005555
+0x7fffffffdba0:	0x55554960	0x00005555	0x55554660	0x00005555
+0x7fffffffdbb0:	0xffffdca0	0x00007fff
+(gdb) frame 5
+#0  0x0000000000000000 in ?? ()
+(gdb) frame 4
+#0  0x0000000000000000 in ?? ()
+(gdb) frame 3
+#0  0x0000000000000000 in ?? ()
+(gdb) frame 2
+#0  0x0000000000000000 in ?? ()
+(gdb) frame 1
+#1  0x00005555555548b7 in main () at simple.c:46
+46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
+(gdb) frame 0
+#0  0x0000555555554830 in mistake3 () at simple.c:29
+29	  buf[0] = 3;
+
+-----Wechsel zu Frame 1------------------------------------------
+
+(gdb) select-frame 1
+(gdb) frame
+#1  0x00005555555548b7 in main () at simple.c:46
+46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
+
+-----Ausgabe von p-----------------------------------------------
+
+(gdb) print p
+$7 = {0x4, 0x555555756014, 0x555555554960 <__libc_csu_init>, 0x555555554660 <_start>}
+
+-----Aufruf von mistake4-----------------------------------------
+
+(gdb) call mistake4
+$8 = {int *()} 0x55555555483c <mistake4>
+(gdb) print mistake4
+$9 = {int *()} 0x55555555483c <mistake4>
+(gdb) c
+Continuing.
