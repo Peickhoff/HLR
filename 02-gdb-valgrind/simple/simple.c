@@ -9,7 +9,7 @@
 int *
 mistake1 ()
 {
-  int *buf2 = malloc (sizeof (char) * 6);
+  int *buf2 = malloc (sizeof (int) * 6);
   int buf[] = { 1, 1, 2, 3, 4, 5 };
   memcpy(buf2,buf,sizeof(buf));
   return buf2;
@@ -18,7 +18,7 @@ mistake1 ()
 int *
 mistake2 ()
 {
-  int *buf = malloc (sizeof (char) * 4);
+  int *buf = malloc (sizeof (int) * 4);
   buf[1] = 2;
   return buf;
 }
@@ -35,7 +35,7 @@ mistake3 ()
 int *
 mistake4 ()
 {
-  int *buf = malloc (sizeof (char) * 1);
+  int *buf = malloc (sizeof (int) * 1);
   buf[0] = 4;
   //free (buf);
   return buf;
