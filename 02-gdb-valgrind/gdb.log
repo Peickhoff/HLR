@@ -1,273 +1,0 @@
-Script started on Sa 29 Okt 2016 16:13:49 CEST
-[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind]1;..-gdb-valgrind]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind [49m[34m[39m [K[137C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 397 [39m[37m[39m[47m[30m 16:13:50 [39m[00m[49m[158D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind [49m[34m[39m [K[137C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 397 [39m[37m[39m[47m[30m 16:13:50 [39m[00m[49m[158D[?2004hl[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind [49m[34m[39m l[K[136C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 397 [39m[37m[39m[47m[30m 16:14:29 [39m[00m[49m[157D
-]2;ls --color=tty -lah]1;ltotal 16K
-drwxr-xr-x 4 patrick patrick 4,0K Okt 29 16:13 [0m[01;34m.[0m
-drwxrwxr-x 4 patrick patrick 4,0K Okt 27 12:20 [01;34m..[0m
-drwxr-xr-x 2 patrick patrick 4,0K Okt 22 21:12 [01;34mbroken-pde[0m
--rw-r--r-- 1 patrick patrick    0 Okt 22 21:12 gdb-ausgabe.txt
--rw-r--r-- 1 patrick patrick    0 Okt 29 16:13 gdb.log
--rw-r--r-- 1 patrick patrick    0 Okt 22 21:12 pde-error.txt
-drwxr-xr-x 2 patrick patrick 4,0K Okt 25 16:55 [01;34msimple[0m
--rw-r--r-- 1 patrick patrick    0 Okt 22 21:12 simple-error.txt
-[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind]1;..-gdb-valgrind]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind [49m[34m[39m [K[137C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 398 [39m[37m[39m[47m[30m 16:14:29 [39m[00m[49m[158D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind [49m[34m[39m [K[137C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 398 [39m[37m[39m[47m[30m 16:14:29 [39m[00m[49m[158D[?2004hccd simple[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind [49m[34m[39m cd simple[K[128C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 398 [39m[37m[39m[47m[30m 16:14:42 [39m[00m[49m[149D
-]2;cd simple]1;cd[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple]1;..lgrind/simple]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/simple[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m [K[130C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 399 [39m[37m[39m[47m[30m 16:14:42 [39m[00m[49m[151D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m [K[130C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 399 [39m[37m[39m[47m[30m 16:14:42 [39m[00m[49m[151D[?2004hl[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m l[K[129C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 399 [39m[37m[39m[47m[30m 16:14:45 [39m[00m[49m[150D
-]2;ls --color=tty -lah]1;ltotal 28K
-drwxr-xr-x 2 patrick patrick 4,0K Okt 25 16:55 [0m[01;34m.[0m
-drwxr-xr-x 4 patrick patrick 4,0K Okt 29 16:13 [01;34m..[0m
--rw-r--r-- 1 patrick patrick   81 Okt 22 21:12 Makefile
--rwxr-xr-x 1 patrick patrick  12K Okt 25 16:55 [01;32msimple[0m
--rw-r--r-- 1 patrick patrick  983 Okt 22 21:12 simple.c
-[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple]1;..lgrind/simple]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/simple[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m [K[130C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 400 [39m[37m[39m[47m[30m 16:14:45 [39m[00m[49m[151D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m [K[130C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 400 [39m[37m[39m[47m[30m 16:14:45 [39m[00m[49m[151D[?2004hggdb simple[?1l>[?2004l[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m gdb simple[K[120C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 400 [39m[37m[39m[47m[30m 16:15:16 [39m[00m[49m[141D
-]2;gdb simple]1;gdbGNU gdb (Ubuntu 7.11.90.20161005-0ubuntu1) 7.11.90.20161005-git
-Copyright (C) 2016 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "x86_64-linux-gnu".
-Type "show configuration" for configuration details.
-For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>.
-Find the GDB manual and other documentation resources online at:
-<http://www.gnu.org/software/gdb/documentation/>.
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
-Reading symbols from simple...done.
-(gdb) list
-30	  return buf;
-31	}
-32	
-33	int *
-34	mistake4 ()
-35	{
-36	  int *buf = malloc (sizeof (char) * 4);
-37	  buf[4] = 4;
-38	  free (buf);
-39	  return buf;
-(gdb) list 0
-1	/*
-2	** simple error demonstration to demonstrate power of valgrind
-3	** Julian M. Kunkel - 17.04.2008
-4	*/
-5	
-6	#include <stdio.h>
-7	#include <stdlib.h>
-8	
-9	int *
-10	mistake1 ()
-(gdb) info function
-All defined functions:
-
-File simple.c:
-int main(void);
-int *mistake1();
-int *mistake2();
-int *mistake3();
-int *mistake4();
-
-Non-debugging symbols:
-0x0000000000000600  _init
-0x0000000000000660  _start
-0x0000000000000690  deregister_tm_clones
-0x00000000000006d0  register_tm_clones
-0x0000000000000720  __do_global_dtors_aux
-0x0000000000000760  frame_dummy
-0x0000000000000960  __libc_csu_init
-0x00000000000009d0  __libc_csu_fini
-0x00000000000009d4  _fini
-(gdb) ist m[K[K[K[K[Klist main
-39	  return buf;
-40	}
-41	
-42	int
-43	main (void)
-44	{
-45	  /* Modifizieren Sie die folgende Zeile nicht */
-46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
-47	
-48	  printf ("1 %d\n", *p[0]);
-(gdb) list 48
-43	main (void)
-44	{
-45	  /* Modifizieren Sie die folgende Zeile nicht */
-46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
-47	
-48	  printf ("1 %d\n", *p[0]);
-49	  printf ("2 %d\n", *p[1]);
-50	  printf ("3 %d\n", *p[2]);
-51	  printf ("4 %d\n", *p[3]);
-52	
-(gdb) list mistake [K1
-6	#include <stdio.h>
-7	#include <stdlib.h>
-8	
-9	int *
-10	mistake1 ()
-11	{
-12	  int buf[] = { 1, 1, 2, 3, 4, 5 };
-13	  return buf;
-14	}
-15	
-(gdb) list main [K, *mistake1[C[1Pmistake1
-(gdb) list mistakee 2[K[K[K[Ke2
-13	  return buf;
-14	}
-15	
-16	int *
-17	mistake2 ()
-18	{
-19	  int *buf = malloc (sizeof (char) * 4);
-20	  buf[2] = 2;
-21	  return buf;
-22	}
-(gdb) list mistake3+[K
-21	  return buf;
-22	}
-23	
-24	int *
-25	mistake3 ()
-26	{
-27	  int mistake2_ = 0;
-28	  int *buf = (int *) &mistake2;
-29	  buf[0] = 3;
-30	  return buf;
-(gdb) mista[K[K[K[K[Klist mistake [K1
-6	#include <stdio.h>
-7	#include <stdlib.h>
-8	
-9	int *
-10	mistake1 ()
-11	{
-12	  int buf[] = { 1, 1, 2, 3, 4, 5 };
-13	  return buf;
-14	}
-15	
-(gdb) b mistake1
-Breakpoint 1 at 0x798: file simple.c, line 11.
-(gdb) run[K[K
-Starting program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple/simple 
-
-Breakpoint 1, mistake1 () at simple.c:11
-11	{
-(gdb) print buf
-$1 = {194, 0, -9313, 32767, -9314, 32767}
-(gdb) buf [K[]2]
-Undefined command: "buf".  Try "help".
-(gdb) buf[2]pbuf[2]rbuf[2]ibuf[2]nbuf[2]tbuf[2] buf[2]
-$2 = -9313
-(gdb) n
-12	  int buf[] = { 1, 1, 2, 3, 4, 5 };
-(gdb) nprint buf[2][C[C[C[C[C[C[6Pbuf[2]print buf
-$3 = {194, 0, -9313, 32767, -9314, 32767}
-(gdb) print buf[C[C[C[C[C[Cn[Kprint buf[2][C[C[C[C[C[C[6Pbuf[2]print buf[2]
-$4 = -9313
-(gdb) n
-13	  return buf;
-(gdb) nprint buf[2][K[C[C[C[C[C[Cn[Kprint buf
-$5 = {1, 1, 2, 3, 4, 5}
-(gdb) print buf[C[C[C[C[C[Cn[Kprint buf[2]
-$6 = 2
-(gdb) ptype [K[K[K[K[K[Kptype buf
-type = int [6]
-(gdb) b mistake2
-Breakpoint 2 at 0x5555555547f4: file simple.c, line 19.
-(gdb) c
-Continuing.
-
-Breakpoint 2, mistake2 () at simple.c:19
-19	  int *buf = malloc (sizeof (char) * 4);
-(gdb) ptyte [K[K[Kpe buf
-type = int *
-(gdb) c
-Continuing.
-
-Program received signal SIGSEGV, Segmentation fault.
-0x0000555555554830 in mistake3 () at simple.c:29
-29	  buf[0] = 3;
-(gdb) list 29
-24	int *
-25	mistake3 ()
-26	{
-27	  int mistake2_ = 0;
-28	  int *buf = (int *) &mistake2;
-29	  buf[0] = 3;
-30	  return buf;
-31	}
-32	
-33	int *
-(gdb) frame 1
-#1  0x00005555555548b7 in main () at simple.c:46
-46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
-(gdb) x/10x $sp
-0x7fffffffdb90:	0x00000004	0x00000000	0x55756014	0x00005555
-0x7fffffffdba0:	0x55554960	0x00005555	0x55554660	0x00005555
-0x7fffffffdbb0:	0xffffdca0	0x00007fff
-(gdb) frame main
-#0  0x0000000000000000 in ?? ()
-(gdb) frame 5
-#0  0x0000000000000000 in ?? ()
-(gdb) fara[K[K[Krame 4
-#0  0x0000000000000000 in ?? ()
-(gdb) frame 3
-#0  0x0000000000000000 in ?? ()
-(gdb) de[K[Kframe 2
-#0  0x0000000000000000 in ?? ()
-(gdb) frame 1
-#1  0x00005555555548b7 in main () at simple.c:46
-46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
-(gdb) frm[Kame 0
-#0  0x0000555555554830 in mistake3 () at simple.c:29
-29	  buf[0] = 3;
-(gdb) select frame 1[K[K[K[K[K[K[K[K-frame 1
-(gdb) fraame[K[K[Kme
-#1  0x00005555555548b7 in main () at simple.c:46
-46	  int *p[4] = { &mistake1 ()[1], &mistake2 ()[1], mistake3 (), mistake4 () };
-(gdb) ṕrin [K[K[K[K[Kprin [Kt p
-$7 = {0x4, 0x555555756014, 0x555555554960 <__libc_csu_init>, 0x555555554660 <_start>}
-(gdb) call mistake 4[K[K4[K[K[K[K[K[K[K[K[K[K[K[K[Kcall mistke[K[Kake [K4
-$8 = {int *()} 0x55555555483c <mistake4>
-(gdb) print mistke[K[Kake 4
-No symbol "mistake" in current context.
-(gdb) print mistake 4[1P4
-$9 = {int *()} 0x55555555483c <mistake4>
-(gdb) print mistake4[K[K[K[K[K[K[K[K[K[K[K[K[K[Kc
-Continuing.
-
-Program terminated with signal SIGSEGV, Segmentation fault.
-The program no longer exists.
-(gdb) r
-Starting program: /home/patrick/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple/simple 
-
-Breakpoint 1, mistake1 () at simple.c:11
-11	{
-(gdb) c
-Continuing.
-
-Breakpoint 2, mistake2 () at simple.c:19
-19	  int *buf = malloc (sizeof (char) * 4);
-(gdb) c
-Continuing.
-
-Program received signal SIGSEGV, Segmentation fault.
-0x0000555555554830 in mistake3 () at simple.c:29
-29	  buf[0] = 3;
-(gdb) list 29
-24	int *
-25	mistake3 ()
-26	{
-27	  int mistake2_ = 0;
-28	  int *buf = (int *) &mistake2;
-29	  buf[0] = 3;
-30	  return buf;
-31	}
-32	
-33	int *
-(gdb) quit
-A debugging session is active.
-
-	Inferior 1 [process 9760] will be killed.
-
-Quit anyway? (y or n) y
-[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                              ]2;patrick@patrick-Lenovo-Z50-70: ~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple]1;..lgrind/simple]7;file:///home/patrick/Documents/Studium_SSE/HLR/02%2Dgdb%2Dvalgrind/simple[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m [K[130C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 401 [39m[37m[39m[47m[30m 16:47:32 [39m[00m[49m[151D[?1h=[0m[27m[24m[J[39m[0m[49m[41m [39mpatrick@patrick-Lenovo-Z50-70 [44m[31m [30m~/Documents/Studium_SSE/HLR/02-gdb-valgrind/simple [49m[34m[39m [K[130C[39m[0m[49m[30m[39m[40m[38;5;46m [38;5;46m✓[39m [39m[38;5;244m[39m[48;5;244m[30m 401 [39m[37m[39m[47m[30m 16:47:32 [39m[00m[49m[151D[?2004h[?2004l
-
-Script done on Sa 29 Okt 2016 16:47:35 CEST

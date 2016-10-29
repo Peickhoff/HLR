@@ -1,0 +1,88 @@
+Segmentation uns unbekannter Herkunft:
+
+-----gdb---------------------------------------------------------
+eickhoff@cluster:~/02-gdb-valgrind/broken-pde$ gdb --args ./partdiff-seq 1 1 100 1 2 5
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.04) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./partdiff-seq...done.
+(gdb) r
+Starting program: /home/eickhoff/02-gdb-valgrind/broken-pde/partdiff-seq 1 1 100 1 2 5
+
+============================================================
+Program for calculation of partial differential equations.
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+
+Program received signal SIGSEGV, Segmentation fault.
+rawmemchr () at ../sysdeps/x86_64/rawmemchr.S:52
+52	../sysdeps/x86_64/rawmemchr.S: No such file or directory.
+(gdb) l 52
+47	in ../sysdeps/x86_64/rawmemchr.S
+(gdb) frame
+#0  rawmemchr () at ../sysdeps/x86_64/rawmemchr.S:52
+52	in ../sysdeps/x86_64/rawmemchr.S
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 32687] will be killed.
+
+Quit anyway? (y or n) y
+
+-----valgrind----------------------------------------------------
+eickhoff@cluster:~/02-gdb-valgrind/broken-pde$ valgrind --tool=memcheck ./partdiff-seq 1 1 100 1 2 5
+==31259== Memcheck, a memory error detector
+==31259== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==31259== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==31259== Command: ./partdiff-seq 1 1 100 1 2 5
+==31259==
+
+============================================================
+Program for calculation of partial differential equations.
+============================================================
+(c) Dr. Thomas Ludwig, TU M"unchen.
+    Thomas A. Zochler, TU M"unchen.
+    Andreas C. Schmidt, TU M"unchen.
+============================================================
+==31259== Invalid read of size 1
+==31259==    at 0x51D89A0: rawmemchr (rawmemchr.S:25)
+==31259==    by 0x51BFFF1: _IO_str_init_static_internal (strops.c:41)
+==31259==    by 0x51AEBB6: __isoc99_vsscanf (isoc99_vsscanf.c:41)
+==31259==    by 0x51AEB56: __isoc99_sscanf (isoc99_sscanf.c:31)
+==31259==    by 0x401CFE: AskParams (askparams.c:197)
+==31259==    by 0x40174C: main (partdiff-seq.c:304)
+==31259==  Address 0x6c2f73656c75646f is not stack'd, malloc'd or (recently) free'd
+==31259==
+==31259==
+==31259== Process terminating with default action of signal 11 (SIGSEGV)
+==31259==  General Protection Fault
+==31259==    at 0x51D89A0: rawmemchr (rawmemchr.S:25)
+==31259==    by 0x51BFFF1: _IO_str_init_static_internal (strops.c:41)
+==31259==    by 0x51AEBB6: __isoc99_vsscanf (isoc99_vsscanf.c:41)
+==31259==    by 0x51AEB56: __isoc99_sscanf (isoc99_sscanf.c:31)
+==31259==    by 0x401CFE: AskParams (askparams.c:197)
+==31259==    by 0x40174C: main (partdiff-seq.c:304)
+==31259==
+==31259== HEAP SUMMARY:
+==31259==     in use at exit: 0 bytes in 0 blocks
+==31259==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==31259==
+==31259== All heap blocks were freed -- no leaks are possible
+==31259==
+==31259== For counts of detected and suppressed errors, rerun with: -v
+==31259== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Segmentation fault (core dumped)

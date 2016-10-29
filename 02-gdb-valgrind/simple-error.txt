@@ -1,33 +1,33 @@
 (Die Zeilenangaben beziehen sich auf die uneditierte simple.c)
 Segmentation Fault in Zeile 29:
-*buf wird nicht richtig initialisiert, da anstatt mistake2() aufzurufen eine
-variable mistake2 referenziert wird. Dementsprechend kann der Aufruf
-buf[0] = 3 nicht richtig ausgeführt werden, da buf hierdurch kein array ist.
+  *buf wird nicht richtig initialisiert, da anstatt mistake2() aufzurufen eine
+  variable mistake2 referenziert wird. Dementsprechend kann der Aufruf
+  buf[0] = 3 nicht richtig ausgeführt werden, da buf hierdurch kein array ist.
 Segmentation Fault in Zeile 48:
-mistake1() gibt einen Pointer auf eine lokale Variable ohne zugewiesenen Speicher zurück,
-welche nach dem return nicht mehr existiert. Es handelt sich also um einen dangling
-Pointer welcher in main() nicht dereferenziert werden kann.
+  mistake1() gibt einen Pointer auf eine lokale Variable ohne zugewiesenen Speicher zurück,
+  welche nach dem return nicht mehr existiert. Es handelt sich also um einen "dangling
+  Pointer" welcher in main() nicht dereferenziert werden kann.
 Zuweisung in Zeile 20 und 37:
-main() liest Index 1 aus der Rückgabe von mistake2() aus, der einzige
-gesetzte Index ist allerdings buf[2] = 2. Daraus folgt eine Ausgabe von "2 0" statt
-"2 2". Ein ähnlicher Fehler existiert in Zeile 37 in der buf[4] = 4 gesetzt wird,
-mit dem Unterschied, dass hier direkt die Adresse dereferenziert wird, was allerdings
-im Array Kontext gleichbedeutend mit dem Index 0 ist.
+  main() liest Index 1 aus der Rückgabe von mistake2() aus, der einzige
+  gesetzte Index ist allerdings buf[2] = 2. Daraus folgt eine Ausgabe von "2 0" statt
+  "2 2". Ein ähnlicher Fehler existiert in Zeile 37 in der buf[4] = 4 gesetzt wird,
+  mit dem Unterschied, dass hier direkt die Adresse dereferenziert wird, was allerdings
+  im Array Kontext gleichbedeutend mit dem Index 0 ist.
 Speicherfreigabe in Zeile 38:
-Ein weiterer Fehler in mistake4() besteht darin, dass der für *buf reservierte
-Speicher bereits vor dem return wieder freigegeben wird. Hierdurch entsteht
-bei der späteren Derefenrenzierung ein völlig anderer Wert.
+  Ein weiterer Fehler in mistake4() besteht darin, dass der für *buf reservierte
+  Speicher bereits vor dem return wieder freigegeben wird. Hierdurch entsteht
+  bei der späteren Derefenrenzierung ein völlig anderer Wert.
 Speicherfreigabe in Zeile 55:
-Der Pointer p[1] verweist auf Index 1 des Pointers, der von mistake2() zurückgegeben
-wird. Dies ist aber eine andere Adresse, als die des Arrays, welche der Adresse des
-Index 0 entspricht. Dementsprechend muss eine Größeneinheit abgezogen werden. Selbiges
-gilt für die Freigabe des von uns zugewiesenen Speichers von p[0]. Für das Freigeben
-von p[3] und p[4] reicht allerdings ein einfacher free Befehl, da diese direkt auf
-die Adresse verweisen.
+  Der Pointer p[1] verweist auf Index 1 des Pointers, der von mistake2() zurückgegeben
+  wird. Dies ist aber eine andere Adresse, als die des Arrays, welche der Adresse des
+  Index 0 entspricht. Dementsprechend muss eine Größeneinheit abgezogen werden. Selbiges
+  gilt für die Freigabe des von uns zugewiesenen Speichers von p[0]. Für das Freigeben
+  von p[3] und p[4] reicht allerdings ein einfacher free Befehl, da diese direkt auf
+  die Adresse verweisen.
 Falsche Speicherzuweisung in Zeile 19 und 36:
-Sowohl mistake2() als auch mistake4() bekommen zu viel Speicher zugewiesen. Im *buf
-von mistake2() werden nie mehr als 2 Adressen genutzt, in mistake4() nur ein einzelne.
-Also benötigt mistake2() nur die Hälfte des ursprünglich zugewiesenen Speichers und
-mistake4() nur ein Viertel. Zudem beschwert sich valgrind über die Verwendung von
-sizeof (char), daher verwenden wir nun sizeof (int) auch wenn dies von der Größe
-her in c keinen Unterschied macht.
+  Sowohl mistake2() als auch mistake4() bekommen zu viel Speicher zugewiesen. Im *buf
+  von mistake2() werden nie mehr als 2 Adressen genutzt, in mistake4() nur eine einzelne.
+  Also benötigt mistake2() nur die Hälfte des ursprünglich zugewiesenen Speichers und
+  mistake4() nur ein Viertel. Zudem beschwert sich valgrind über die Verwendung von
+  sizeof (char), daher verwenden wir nun sizeof (int), auch wenn dies von der Größe
+  her in c keinen Unterschied macht.

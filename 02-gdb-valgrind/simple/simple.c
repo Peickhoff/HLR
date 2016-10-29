@@ -18,7 +18,7 @@ mistake1 ()
 int *
 mistake2 ()
 {
-  int *buf = malloc (sizeof (int) * 4);
+  int *buf = malloc (sizeof (int) * 2);
   buf[1] = 2;
   return buf;
 }
