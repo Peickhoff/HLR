@@ -1,2 +1,18 @@
-Abgaben bis Samstag 23:59!
-an hr-abgabe@wr.informatik.uni-hamburg.de
+29 &mistake2 -> &mistake2() // Falsch
+
+29 buf = mistake2 pointer
+
+28 mistake2 returns pointer -> int buf* = (int *) mistake2()
+
+-> segmentation fault in main l48
+
+13 mistake1 returned dangling pointer -> allocate mem and cpy to mem
+
+39/40 wert auf index 0, free löscht array
+
+22 Wert 2 muss auf index 1
+
+
+valgrind errors -> invalid write, aber speicher exakt alloziert
+-> anscheinend typ abhängig -> malloc (sizeof (int) * [Zahl]) fixt die fehler
+trotzdem p[0/1]-sizeof(char) -> ?
